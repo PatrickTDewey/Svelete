@@ -6,10 +6,10 @@
 
   const toggle = () => {
     expanded = !expanded;
-  }
+  };
 </script>
 
-<span class:expanded={expanded} on:click={toggle}>{name}</span>
+<span class:expanded on:click={toggle}>{name}</span>
 
 {#if expanded}
   <ul>
