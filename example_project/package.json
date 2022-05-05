@@ -24,6 +24,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "mapbox-gl": "^2.8.2",
     "sirv-cli": "^2.0.0"
   }
 }
