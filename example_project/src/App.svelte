@@ -15,10 +15,48 @@
   import Project from "./Project.svelte";
   import Comment from "./Comment.svelte";
   import Hovering from "./Hovering.svelte";
-  import {fade} from "svelte/transition";
+  import { fade } from "svelte/transition";
   import Map from "./Map.svelte";
   import MapMarker from "./MapMarker.svelte";
-  export let name;
+  // export let name;
+
+  /**
+   * Start Folder Recursion example with Folder and File Component
+  */
+  import Folder from "./Folder.svelte";
+  let root = [
+    {
+      name: "Important work stuff",
+      files: [
+        { name: "quarterly-results.xlsx" }
+      ]
+    },
+    {
+      name: "Animal GIFs",
+      files: [
+        {
+          name: "Dogs",
+          files: [
+            { name: "parkour.gif" },
+            { name: "rampage.gif" }
+          ]
+        },
+        {
+          name: "Goats",
+          files: [
+            { name: "treadmill.gif" },
+            { name: "rope-jumping.gif" }
+          ]
+        },
+        { name: "cat-roomba.gif" },
+        { name: "duck-shuffle.gif" }
+      ]
+    },
+    { name: "TODO.md" }
+  ];
+  /**
+   * End Recursion example with Folder component
+  */
 </script>
 
 <!-- <main>
@@ -84,15 +122,24 @@
 <!-- End Hovering -->
 <!-- Start Map -->
 <!-- <Map lat={35} lon={-84} zoom={3.5}>
-	<MapMarker lat={37.8225} lon={-122.0024} label="Svelte Body Shaping"/>
-	<MapMarker lat={33.8981} lon={-118.4169} label="Svelte Barbershop & Essentials"/>
-	<MapMarker lat={29.7230} lon={-95.4189} label="Svelte Waxing Studio"/>
-	<MapMarker lat={28.3378} lon={-81.3966} label="Svelte 30 Nutritional Consultants"/>
-	<MapMarker lat={40.6483} lon={-74.0237} label="Svelte Brands LLC"/>
-	<MapMarker lat={40.6986} lon={-74.4100} label="Svelte Medical Systems"/>
+  <MapMarker lat={37.8225} lon={-122.0024} label="Svelte Body Shaping" />
+  <MapMarker
+    lat={33.8981}
+    lon={-118.4169}
+    label="Svelte Barbershop & Essentials"
+  />
+  <MapMarker lat={29.723} lon={-95.4189} label="Svelte Waxing Studio" />
+  <MapMarker
+    lat={28.3378}
+    lon={-81.3966}
+    label="Svelte 30 Nutritional Consultants"
+  />
+  <MapMarker lat={40.6483} lon={-74.0237} label="Svelte Brands LLC" />
+  <MapMarker lat={40.6986} lon={-74.41} label="Svelte Medical Systems" />
 </Map> -->
 <!-- End Map -->
-
+<!-- Start Folder -->
+<Folder name="Home" files={root} expanded={false} />
 <style>
   /* Styling Before Project and Comment Components */
   /* main {
@@ -137,9 +184,9 @@
     flex: 1 1 50%;
     min-width: 200px;
   } */
-   /* End Styling for Project and Comment Components */
-   /* Hoverable Styling */
-   /* div {
+  /* End Styling for Project and Comment Components */
+  /* Hoverable Styling */
+  /* div {
      padding:1em;
      margin:0 0 1em 0;
      background-color: #eee;
@@ -148,5 +195,5 @@
      background-color: #ff3e00;
      color: white;
    } */
-   /* End Hoverable Styling */
+  /* End Hoverable Styling */
 </style>
