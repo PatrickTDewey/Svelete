@@ -110,7 +110,7 @@
 <!-- <Transition/> -->
 <!-- <Typewriter/> -->
 <!-- <List /> -->
-<!-- <ToDoList /> -->
+<ToDoList />
 <!-- <KeyBlock /> -->
 <!-- <Actions /> -->
 <!-- <LongPressExample /> -->
@@ -146,7 +146,7 @@
       </div>
     </Project>
   </li>
-</ul>
+</ul> -->
 <!-- End Project -->
 <!-- Start Hovering -->
 <!-- {#each Array(5) as _ }
@@ -243,7 +243,7 @@
   <!-- See Tutorial for example.... -->
 <!-- End svelte:options -->
 <style>
-  /* Styling Before Project and Comment Components */
+  /* Start tyling Before Project and Comment Components */
   /* main {
     text-align: center;
     padding: 1em;
@@ -263,7 +263,7 @@
       max-width: none;
     }
   } */
-  /* Styling for Project and Comment Components */
+  /* End Styling for Project and Comment Components */
   /* h1 {
     font-weight: 300;
     margin: 0 1rem;

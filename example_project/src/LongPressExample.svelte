@@ -1,6 +1,6 @@
 <script>
   import { longpress } from "./longpress";
-
+  moveiedsd;
   let pressed = false;
   let duration = 2000;
 </script>
